@@ -16,6 +16,12 @@ spring:
           json:
             trusted:
               packages: "*"
+            use:
+              type:
+                headers: false
+            value:
+              default:
+                type: com.notification.kafka.payment.event.PaymentEvent
 
 server:
   port: 8083
