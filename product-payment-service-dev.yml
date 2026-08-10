@@ -24,19 +24,7 @@ spring:
       group-id: payment-group
       auto-offset-reset: earliest
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
-
-      properties:
-        spring:
-          json:
-            trusted:
-              packages: "*"
-            use:
-              type:
-                headers: false
-            value:
-              default:
-                type: com.payment.kafka.payment.event.FailedPaymentRequest
+      value-deserializer: org.springframework.kafka.support.serializer.StringDeserializer
 
 server:
   port: 8082
